@@ -1,0 +1,17 @@
+version: 2
+updates:
+# Will "a" be the only one updated?
+- package-ecosystem: pip
+  directory: "/a"
+  schedule:
+    interval: weekly
+# Will it not see subdirectories?
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: weekly
+# Will it break on a missing /?
+- package-ecosystem: pip
+  directory: "c"
+  schedule:
+    interval: weekly
